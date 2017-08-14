@@ -32,6 +32,7 @@ pwd'''
     stage('prod promotion') {
       steps {
         echo 'prod promotion'
+        input(message: 'Continue?', id: 'quangnd')
       }
     }
   }
