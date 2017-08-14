@@ -6,6 +6,12 @@ pipeline {
         sh '''echo "Compiling"
 pwd'''
         pwd(tmp: true)
+        retry(count: 10) {
+          echo 'Hello World'
+        }
+        
+        readFile(file: 'README.md', encoding: 'UTF-8')
+        fileExists 'README.md'
       }
     }
     stage('testing') {
