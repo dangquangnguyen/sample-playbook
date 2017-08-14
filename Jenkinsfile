@@ -22,6 +22,7 @@ pwd'''
     stage('baking') {
       steps {
         echo 'Baking AMI'
+        s3Download(file: 'test', bucket: 'quangnd', force: true)
       }
     }
     stage('staging') {
