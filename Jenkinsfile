@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('compile') {
       steps {
-        sh 'echo "Compiling"'
+        sh '''echo "Compiling"
+pwd'''
       }
     }
     stage('testing') {
