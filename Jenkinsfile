@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh '''echo "Compiling"
 pwd'''
+        pwd(tmp: true)
       }
     }
     stage('testing') {
